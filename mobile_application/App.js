@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Alert, TouchableOpacity } from 'react-native';
+import { StyleSheet, Alert } from 'react-native';
 import { Container, Header, Content, Button, Text, Body, Title, Root, Card, CardItem, Thumbnail, Icon, Left } from 'native-base';
 import { Font, AppLoading } from "expo";
 
@@ -54,7 +54,7 @@ export default class App extends React.Component {
       <Container>
         <Header>
           <Body>
-            <Title>KW-HB</Title>
+            <Title>Remote LED</Title>
           </Body>
         </Header>
         <Content>
@@ -63,7 +63,7 @@ export default class App extends React.Component {
               <Left>
                 <Thumbnail source={require('./assets/icon_v2.png')} />
                 <Body>
-                  <Text>给张杨楷文的生日礼物</Text>
+                  <Text>Remote LED Switch</Text>
                   <Text note>Jan 31, 2019</Text>
                 </Body>
               </Left>
@@ -71,34 +71,21 @@ export default class App extends React.Component {
             <CardItem>
               <Body>
                 <Text>
-                  用下面的开关叫醒汤海彬                                   
+                  Use the button below to turn on and off the LED                                   
                 </Text>
               </Body>
             </CardItem>
             <CardItem>
-              {/* <Left> */}
-                <Button transparent textStyle={{color: '#87838B'}} onPress={() => this.handle_click("/off")}>
+                <Button transparent textStyle={{color: '#87838B'}} onPress={() => this.handle_click("/")}>
                   <Icon name="logo-github" />
-                  <Text>开灯叫小猴</Text>
+                  <Text>Turn On LED</Text>
                 </Button>
-              {/* </Left> */}
-              {/* <Right> */}
-              <Button transparent textStyle={{color: '#87838B'}} onPress={() => this.handle_click("/")}>
+              <Button transparent textStyle={{color: '#87838B'}} onPress={() => this.handle_click("/off")}>
                   <Icon name="logo-github" />
-                  <Text>关灯睡觉</Text>
+                  <Text>Turn Off LED</Text>
                 </Button>
-              {/* </Right> */}
             </CardItem>
           </Card>
-          {/* <Button onPress={() => this.handle_click("/off")}>
-            <Text>Wake HB UP</Text>
-          </Button>
-          <Button onPress={() => this.handle_click("/")}>
-            <Text>Turn off the light</Text>
-          </Button>
-          <Button onPress={() => this.showAlert()}>
-            <Text>Alert</Text>
-          </Button> */}
         </Content>
       </Container>
     );
