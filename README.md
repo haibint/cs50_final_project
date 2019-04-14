@@ -1,4 +1,4 @@
-# Remote Control Connected LED
+# Remote Controlled LED
 
 ## Description
 This is an self-made remote control LED. You can turn on/off An LED(Or essentially any electrical devices)
